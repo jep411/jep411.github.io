@@ -1,0 +1,3 @@
+grant codeBase "file:main.jar" {
+	permission java.security.AllPermission;
+};
