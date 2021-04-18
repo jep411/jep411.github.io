@@ -5,6 +5,7 @@ Seven Java source files, to bash scripts and one skinny 'policy' file
 ## First compile everything
 
 ```
+cd examples/simple
 ./build.sh
 ```
 
