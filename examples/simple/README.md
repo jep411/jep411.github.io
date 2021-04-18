@@ -9,7 +9,7 @@ cd examples/simple
 ./build.sh
 ```
 
-We chose not to choose Maven, Gradle or other.
+We chose not to choose Maven, Gradle or similar. We also chose to not use JUnit or similar
 
 ## To test
 
