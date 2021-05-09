@@ -2,11 +2,14 @@ package brownbear;
 
 import honey.Honey;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.net.Socket;
+import java.net.*;
 import java.security.AccessControlException;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
 
 public class BrownBear {
 
@@ -16,7 +19,7 @@ public class BrownBear {
         this.honey = honey;
     }
     
-    public void eat() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+    public void eat() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, ClassNotFoundException, InstantiationException, IOException {
 
 
         try {
@@ -69,6 +72,8 @@ public class BrownBear {
         } catch (AccessControlException e) {
             System.out.println("BrownBear.eat(): field HoneyImplHider.hiddenImpl reflection access is correctly blocked by security manager");
         }
+
+        new DynamicAttemptToMakeBrownBear().go(honey);
 
     }
     
